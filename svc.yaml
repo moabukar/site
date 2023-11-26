@@ -1,31 +1,30 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: sitesvc
+  name: mosite
 spec:
   selector:
-    app: sitedeploy
+    app: mosite
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sitedeploy
+  name: mosite-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sitedeploy
+      app: mosite
   template:
     metadata:
       labels:
-        app: sitedeploy
+        app: mosite
     spec:
       containers:
-      - name: mosite
+      - name: mosite-container
         image: moabukar/mosite
         ports:
         - containerPort: 80

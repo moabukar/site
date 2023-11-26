@@ -1,8 +1,8 @@
 # Load the docker_build function
-docker_build('site', '.')
+docker_build('moabukar/mosite', '.')
 
 # Deploy the image in a local Kubernetes setup
-k8s_yaml('k8s.yaml')
+k8s_yaml('svc.yaml')
 
 # Specify the service to port-forward
-k8s_resource('site', port_forwards="8080:80")
+k8s_resource('mosite-deployment', port_forwards="8085:80")
