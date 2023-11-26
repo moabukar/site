@@ -23,5 +23,5 @@ jobs:
       run: sleep 10
 
     - name: Test Website Response
-      run: curl -I localhost:9090
+      run: curl -I localhost:8085
 
