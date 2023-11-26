@@ -12,9 +12,9 @@
 
 ## Local dev (via Tilt/K8s)
 
-- docker build -t mosite .
-- tilt up
-- http://localhost:8080
+- `tilt up`
+- `http://localhost:10350/` - Tilt Dashboard
+- `http://localhost:8085/` - App configured with live updates
 
 TODO:
 - Create official domain
