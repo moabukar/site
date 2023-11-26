@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!--
+      HTML Head Tags
+      Docs: https://github.com/moabukar/HEAD
+    -->
+
+    <!-- Rendering Info -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      Security Headers
+      These are set in HTML because the alternative for this static site is a cloudfront lambda
+      Docs: https://infosec.mozilla.org/guidelines/web_security
+
+      Content Security Policy
+      Docs: https://infosec.mozilla.org/guidelines/web_security#content-security-policy
+      Generator: https://report-uri.com/home/generate
+      Evaluator: https://csp-evaluator.withgoogle.com/
+    -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'none';
+        style-src 'self';
+        img-src 'self';
+        font-src 'self';
+        manifest-src 'self';
+        upgrade-insecure-requests;
+        block-all-mixed-content;
+        require-trusted-types-for 'script';">
+
+    <!--
+      Strict Transport Security
+      Docs: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+      Docs: https://infosec.mozilla.org/guidelines/web_security#http-strict-transport-security
+    -->
+    <meta http-equiv="Strict-Transport-Security" content="
+      max-age=63072000;
+      includeSubDomains;
+      preload;">
+
+    <!--
+      X-XSS-Protection
+      Docs: https://infosec.mozilla.org/guidelines/web_security#x-xss-protection
+    -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+    <!--
+      X-Content-Type-Options
+      Docs: https://infosec.mozilla.org/guidelines/web_security#x-content-type-options
+    -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- Metadata -->
+    <meta name="referrer" content="no-referrer">
+    <link rel="manifest" href="assets/site/site.webmanifest">
+
+    <!-- Titles -->
+    <title>Sean Lingren</title>
+    <meta name="description" content="Mo Abukar's Personal Wesbite">
+
+    <!--
+      Icons
+      Docs: https://developers.google.com/web/fundamentals/design-and-ux/browser-customization/
+      Generated: https://favicon.io/favicon-generator/?t=SL&ff=Ubuntu+Mono&fs=90&fc=%23ececec&b=rounded&bc=%23222831
+    -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="assets/icons/favicon-192x192.png">
+    <link rel="apple-touch-startup-image" href="assets/icons/favicon-192x192.png">
+
+    <!--
+      Colors
+      Docs: https://developers.google.com/web/fundamentals/design-and-ux/browser-customization/
+    -->
+    <meta name="theme-color" content="#222831">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/water/dark.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
+  <body>
+    <div>
+      <h1>Mohamed Abukar</h1>
+      <p>
+        I am a Platform Engineer at
+        <a href="https://www.trainline.com/" target="_blank" rel="noopener" aria-label="loom.com Link">Loom</a>
+        building tools & software to help scale our platform. I also contribute to open source and have some personal projects of my own.
+      </p>
+      <a href="https://github.com/moabukar" target="_blank" rel="noopener"
+        aria-label="Lingrino GitHub Profile">GitHub</a>
+      &nbsp•&nbsp
+      <a href="https://www.linkedin.com/in/moabukar" target="_blank" rel="noopener"
+        aria-label="Sean Lingren LinkedIn Link">LinkedIn</a>
+      &nbsp•&nbsp
+      <a href="assets/security/MoAbukarPGP.asc" target="_blank" rel="noopener"
+        aria-label="Mo Abukar PGP Key">PGP</a>
+    </div>
+
+    <div>
+      <div>
+        <h2>Tech Vault</h2>
+        <p>
+          <code>tech-vault</code> A list of many interview questions & real-world challenges in Tech!
+        </p>
+          &nbsp•&nbsp
+          <a href="https://github.com/moabukar/tech-vault" target="_blank" rel="noopener"
+            aria-label="Tech Vault GitHub Link">GitHub</a>
+      </div>
+
+      <div>
+        <h2>Dotfiles</h2>
+        <p>
+          My <code>dotfiles</code> continuously configure all of my local machines using Ansible.
+          Every system settting, package install, and shell alias is defined in this repo and
+          applied with a simple <code>dot</code> command that I run daily.
+        </p>
+        <a href="https://github.com/moabukar/dotfiles" target="_blank" rel="noopener"
+          aria-label="Infra Personal GitHub Link">GitHub</a>
+      </div>
+
+      <div>
+        <h2>Cami</h2>
+        <p>
+          <code>cami</code> is a simple CLI/API for removing unused AMIs from an AWS account.
+        </p>
+        <a href="https://github.com/lingrino/cami" target="_blank" rel="noopener"
+          aria-label="Cami GitHub Link">GitHub</a>
+      </div>
+    </div>
+  </body>
+
+</html>
