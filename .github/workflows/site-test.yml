@@ -1,0 +1,28 @@
+name: Test Website (in containers)
+
+on: [push, pull_request]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Build Docker Image
+      run: docker build -t mysite .
+
+    - name: Run Docker Container
+      run: docker run -d -p 9090:80 mysite
+
+    - name: Check if Container is Running
+      run: docker ps | grep mysite
+
+    - name: Wait for Container to be Ready
+      run: sleep 10  # Adjust the sleep duration as necessary
+
+    - name: Test Website Response
+      run: curl -I localhost:9090
+
+    # Additional testing steps can be added here
