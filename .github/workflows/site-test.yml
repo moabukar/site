@@ -11,18 +11,17 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Docker Image
-      run: docker build -t mysite .
+      run: docker build -t site .
 
     - name: Run Docker Container
-      run: docker run -d -p 9090:80 mysite
+      run: docker run -d -p 8085:80 mysite
 
     - name: Check if Container is Running
       run: docker ps | grep mysite
 
     - name: Wait for Container to be Ready
-      run: sleep 10  # Adjust the sleep duration as necessary
+      run: sleep 10
 
     - name: Test Website Response
       run: curl -I localhost:9090
 
-    # Additional testing steps can be added here
