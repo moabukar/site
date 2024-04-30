@@ -6,5 +6,5 @@ docker_build('moabukar/mosite', '.', live_update=[
 k8s_yaml('svc.yaml')
 
 # Specify the service to port-forward
-k8s_resource('mosite-deployment', port_forwards="8085:80")
+k8s_resource('mosite-deployment', port_forwards="8080:80")
 

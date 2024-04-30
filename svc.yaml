@@ -7,7 +7,7 @@ spec:
     app: mosite
   ports:
     - protocol: TCP
-      port: 80
+      port: 8080
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -27,4 +27,4 @@ spec:
       - name: mosite-container
         image: moabukar/mosite
         ports:
-        - containerPort: 80
+        - containerPort: 8080
